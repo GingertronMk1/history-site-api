@@ -13,7 +13,12 @@ class PlayController extends Controller
      */
     public function index()
     {
-        //
+        return Play::query()->with([
+            'season',
+            'period',
+            'venue',
+            'playwright'
+        ])->get();
     }
 
     /**

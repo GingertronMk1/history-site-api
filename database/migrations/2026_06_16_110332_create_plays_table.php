@@ -16,9 +16,9 @@ return new class extends Migration
             $table->string('title')->index();
             $table->foreignIdFor(\App\Models\Season::class);
             $table->integer('season_sort')->index()->nullable();
-            $table->string('period')->index()->nullable();
-            $table->string('venue')->index()->nullable();
-            $table->string('playwright')->index()->nullable();
+            $table->foreignIdFor(\App\Models\Period::class);
+            $table->foreignIdFor(\App\Models\Venue::class);
+            $table->foreignIdFor(\App\Models\Playwright::class);
             $table->string('date_start')->nullable();
             $table->string('date_end')->nullable();
             $table->text('summary')->nullable();
