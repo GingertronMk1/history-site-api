@@ -1,0 +1,3 @@
+[submodule "storage/history-project"]
+	path = storage/history-project
+	url = git@github.com:newtheatre/history-project.git
