@@ -11,5 +11,5 @@ class {{ class }} extends Model
 {
     {{ factory }}
     use HasUuids;
-    use SoftDeletes();
+    use SoftDeletes;
 }
